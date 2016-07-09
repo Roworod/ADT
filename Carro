@@ -10,10 +10,12 @@ public class Carro implements Radio{
   private boolean Fm;
   private int contadorLista;
   
-  EstacionActual=8.7;
-  On=false;
-  Fm=true;
-  contadorLista=0;
+  public Carro(){
+    EstacionActual=8.7;
+    On=false;
+    Fm=true;
+    contadorLista=0;
+  }
   
   public void OnOff(){
     On=!On;

@@ -1,0 +1,48 @@
+/*
+*RadioCarro 
+*version 1
+*/
+
+public class Carro implements Radio{
+  private float EstacionActual;
+  private float[] EstacionesMemoria;
+  private boolean On;
+  private boolean Fm;
+  private int contadorLista;
+  
+  EstacionActual=8.7;
+  On=false;
+  Fm=true;
+  contadorLista=0;
+  
+  public void OnOff(){
+    On=!On;
+  }
+    
+  public void AmFm(){
+    Fm=!Fm;
+  }
+    
+  public void CambiarEmisora(){
+    EstacionActual+=0.3;
+  }
+  
+  /*
+  *
+  */
+  public void GuardarEmisora(){
+    EstacionesMemoria[contadorLista]=EstacionActual;
+    if (contadorLista<12)
+      contadorLista+=1;
+    else
+      contadorLista=0;
+  }
+  
+  public void SeleccionarEmisora(){
+    EstacionActual=EstacionesMemoria[contadorLista]
+    contadorLista+=1;
+  }
+  
+  public void GuardarSeleccionar(){}
+  
+}
